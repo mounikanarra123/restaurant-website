@@ -1,74 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset + Base Styles */
+* {
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
-    padding: 10px;
-}
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff7f0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    background: #d94f30;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    margin-bottom: 0.5rem;
     text-align: center;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-header nav ul li a {
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-image: url('restaurant-bg.jpg');
-    background-size: cover;
+    font-weight: bold;
+  }
+  
+  nav a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .hero {
     text-align: center;
-    color: white;
-}
-
-.hero video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.hero h1 {
-    position: relative;
-    z-index: 1;
-    padding-top: 150px;
-}
-
-.menu-items {
+    padding: 4rem 1rem;
+    background: #f3e5dc;
+    border-radius: 10px;
+  }
+  
+  .menu-items {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.item {
-    text-align: center;
-    width: 200px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 250px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  form input,
+  form textarea {
     width: 100%;
-}
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background: #d94f30;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Nav */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
